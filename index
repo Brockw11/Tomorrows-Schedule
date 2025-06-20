@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tomorrow's Schedule</title>
+  <script>
+    window.onload = function () {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const yyyy = tomorrow.getFullYear();
+      const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+      const dd = String(tomorrow.getDate()).padStart(2, '0');
+      const dateStr = `${yyyy}-${mm}-${dd}`;
+      
+      const baseUrl = "https://6xie37mwpdle75iszprzy7n3ju0wxmbj.lambda-url.us-west-2.on.aws/shift-summary";
+      const code = "1.AXYAbOmV0pVHZUmGEGWtQ3w_8uqxORBNafBIvGeQxTOztXC0AGh2AA.AgABBAIAAABVrSpeuWamRam2jAF1XRQEAwDs_wUA9P_BF25Dgkqy0QMgHAcp7Iq5w6A1a2W9FqlyC2aWNjzO4uk8RilW3SUMI8-W6MbCQ55Rzv5do7IVlJw7WQJzIUqomgLjSLMrXmMhLgyB6Ec6_8huOCbnPVXx4cGQFOwVQ1nuZFVTRass9uAQiRo9iqRzQpQunSINUVQ1TNkZJRWr8Sl_h27KpRJZgK7BcDlBS6Wz48vfo3U4gQxZKPuQcTcD_ERuaHzcA63wXMMY_cvhsFWlB9r4Tp2_KNDQiDccarrk64MzcFbABj6sEamEpKCLAXK2Y620IbQzc9OL8x0xwFqQx3_SZf2uYfwmn6czCbRm9lHTOeNVRQaYCADdCkvLQTRl_XDevHi467yoJ5tM8dwmvaoRa8fIxWNsExNQEu0jPkoMSAMvQjpnVLAQo9TOupF4HK-aFWTjTdsqScFh0qOYEZBsM30p26XWEHl4S-lnYpo0GhH0ftcR9lZYvUyNJV3mmxlEMOhHyNFEClzql14u2Ww4w0YbrPAfJluqMujMR-iN9ouGvsSbKA9qr4LMwpP3ZhhS47QxYlksMyuw7L-hPiLBLULxAC5jbDdo3_n840cpMakgXVAnct6FzFrk-TCzzqGUp9ZvoNZm2K1AXFrfbDt4qsgUE7EZX_Zev1BehODvI3WyPTiWODi7d35gHAgcQ28QtuNsyiRNRfYCLze-xLjBdI0D65cKwkNOmqe2zyL6l37FdcFz0ylXEwKIlRlaZWC913cMWukLammDaSSgkg6WZRO_YkUlo2-7_yYwjNh2OJN8IHSbqzA9RKw82__PZzvXDsuDKzH1_qVWWL0QQqfjjIwIqPATCx_m5Cj6tWGYo1shra3VKtv5iDHMvxWLqrIfz4D7EO6uWgbyFVWEZD5Eu0TimHm50Yc3SEaeGRcSmPypbvKL84GyZfDEprK-P1yh6bo-WvODX5WsxkYv04wSkiUO2PWbpHM4ufPZB475tvwZcnKB5kiR-zpEq2QwDSjdmuRXRFg";
+      const fullUrl = `${baseUrl}?code=${encodeURIComponent(code)}&date=${dateStr}`;
+      window.location.href = fullUrl;
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to tomorrow's schedule...</p>
+</body>
+</html>
